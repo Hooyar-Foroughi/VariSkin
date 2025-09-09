@@ -1,0 +1,29 @@
+# What to run
+enable_training: true
+
+# Model & training
+model_name: resnet18
+num_epochs: 10
+batch_size: 32
+
+# Analysis output options
+enable_scatter_plot: true
+enable_error_visuals: true
+enable_subset_eval: true
+enable_correlation_analysis: true
+enable_mae_normalization: true
+enable_mse_normalization: true
+enable_gradcam: true
+enable_dice_histograms: true
+
+# Images to use for heatmaps
+gradcam_images:
+  - ISIC_0000088.jpg
+  - ISIC_0000047.jpg
+  - ISIC_0000013.jpg
+
+# File and directory paths
+metrics_file: metrics.csv
+image_archive_dir: ISIC_Archive
+benign_json: analysis/benign_names.json
+malignant_json: analysis/malignant_names.json
